@@ -7,7 +7,7 @@ var request = REQUEST.defaults( {
     strictSSL: false
 });
 
-var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?appid=6b7b471967dd0851d0010cdecf28f829";
+var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?appid=6cd2225a1dec81e05dc9dd27a611ad00";
 
 exports.getWeather = function(req, res) {
 	var zip = req.query.zip;
