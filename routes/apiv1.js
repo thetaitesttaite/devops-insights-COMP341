@@ -17,7 +17,7 @@ exports.getWeather = function(req, res) {
 	}
 
 //	var aurl = OPENWEATHERURL + '&zip=' + zip + ',us';
-var aurl = "https://api.openweathermap.org/data/2.5/weather?zip=" +zip+ ",de&appid=6cd2225a1dec81e05dc9dd27a611ad00";
+var aurl = "https://api.openweathermap.org/data/2.5/weather?zip=" +zip+ ",us&appid=6cd2225a1dec81e05dc9dd27a611ad00";
 	request({
 		method: 'GET',
         url: aurl,
