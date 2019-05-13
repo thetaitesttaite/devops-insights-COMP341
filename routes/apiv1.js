@@ -7,8 +7,7 @@ var request = REQUEST.defaults( {
     strictSSL: false
 });
 
-var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?appid=6cd2225a1dec81e05dc9dd27a611ad00";
-//var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/nz&appid=6cd2225a1dec81e05dc9dd27a611ad00";
+var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?appid=6b7b471967dd0851d0010cdecf28f829&units=imperial";
 
 exports.getWeather = function(req, res) {
 	var zip = req.query.zip;
@@ -17,7 +16,7 @@ exports.getWeather = function(req, res) {
 	}
 
 	var aurl = OPENWEATHERURL + '&zip=' + zip + ',us';
-//var aurl = "https://api.openweathermap.org/data/2.5/weather?zip=" +zip+ ",us&appid=6cd2225a1dec81e05dc9dd27a611ad00";
+
 	request({
 		method: 'GET',
         url: aurl,
@@ -41,7 +40,7 @@ exports.getWeather = function(req, res) {
 router.get('/getWeather', exports.getWeather);
 
 
-/*exports.getWeather2 = function(req, res) {
+exports.getWeather2 = function(req, res) {
 	var zip = req.query.zip;
 	if( (zip === null) || (typeof(zip) === 'undefined') ) {
 		return res.status(400).send('zip missing');
@@ -69,7 +68,7 @@ router.get('/getWeather', exports.getWeather);
     });
 
 };
-router.get('/getWeather2', exports.getWeather2);*/
+router.get('/getWeather2', exports.getWeather2);
 
 
 exports.router = router;
